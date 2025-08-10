@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Levashan Pillay - Unity Developer CV</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            color: #2c3e50;
+            background: white;
+            font-size: 11px;
+        }
+
+        .container {
+            max-width: 210mm;
+            margin: 0 auto;
+            background: white;
+            min-height: 297mm;
+            padding: 20mm;
+        }
+
+        /* Header Section */
+        .header {
+            text-align: center;
+            margin-bottom: 25px;
+            padding-bottom: 20px;
+            border-bottom: 3px solid #3498db;
+        }
+
+        .header h1 {
+            font-size: 28px;
+            font-weight: 700;
+            color: #2c3e50;
+            margin-bottom: 5px;
+            letter-spacing: 1px;
+        }
+
+        .header .subtitle {
+            font-size: 16px;
+            color: #3498db;
+            font-weight: 500;
+            margin-bottom: 15px;
+        }
+
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 15px;
+            font-size: 10px;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            color: #555;
+        }
+
+        .contact-icon {
+            width: 12px;
+            height: 12px;
+            background: #3498db;
+            border-radius: 50%;
+            display: inline-block;
+        }
+
+        /* Section Styling */
+        .section {
+            margin-bottom: 20px;
+        }
+
+        .section-title {
+            font-size: 14px;
+            font-weight: 600;
+            color: #2c3e50;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 10px;
+            padding-bottom: 5px;
+            border-bottom: 2px solid #3498db;
+        }
+
+        /* Professional Summary */
+        .summary {
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 5px;
+            border-left: 4px solid #3498db;
+            font-size: 11px;
+            line-height: 1.7;
+        }
+
+        /* Skills Grid */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 15px;
+            margin-top: 10px;
+        }
+
+        .skill-category {
+            background: #f8f9fa;
+            padding: 12px;
+            border-radius: 5px;
+            border-top: 3px solid #3498db;
+        }
+
+        .skill-category h4 {
+            font-size: 11px;
+            font-weight: 600;
+            color: #2c3e50;
+            margin-bottom: 8px;
+        }
+
+        .skill-category ul {
+            list-style: none;
+            font-size: 9.5px;
+        }
+
+        .skill-category li {
+            margin-bottom: 3px;
+            padding-left: 10px;
+            position: relative;
+        }
+
+        .skill-category li:before {
+            content: "▶";
+            position: absolute;
+            left: 0;
+            color: #3498db;
+            font-size: 8px;
+        }
+
+        /* Experience Styling */
+        .job {
+            margin-bottom: 20px;
+            padding: 15px;
+            background: #fdfdfd;
+            border-radius: 5px;
+            border-left: 4px solid #e67e22;
+        }
+
+        .job-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 10px;
+        }
+
+        .job-title {
+            font-size: 13px;
+            font-weight: 600;
+            color: #2c3e50;
+        }
+
+        .company {
+            font-size: 11px;
+            color: #e67e22;
+            font-weight: 500;
+        }
+
+        .duration {
+            font-size: 10px;
+            color: #7f8c8d;
+            font-style: italic;
+        }
+
+        .project {
+            margin: 10px 0;
+        }
+
+        .project-name {
+            font-size: 11px;
+            font-weight: 600;
+            color: #2c3e50;
+            margin-bottom: 3px;
+        }
+
+        .project-description {
+            font-size: 10px;
+            line-height: 1.5;
+            margin-left: 10px;
+        }
+
+        .achievements {
+            margin: 8px 0;
+        }
+
+        .achievements ul {
+            margin-left: 15px;
+            font-size: 10px;
+        }
+
+        .achievements li {
+            margin-bottom: 3px;
+            line-height: 1.4;
+        }
+
+        /* Current Project Highlight */
+        .current-project {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 15px;
+            border-radius: 8px;
+            margin: 15px 0;
+        }
+
+        .current-project .section-title {
+            color: white;
+            border-bottom-color: rgba(255, 255, 255, 0.3);
+        }
+
+        .current-project .project-name {
+            color: #f1c40f;
+            font-size: 12px;
+        }
+
+        /* Key Achievements */
+        .achievements-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+            margin-top: 10px;
+        }
+
+        .achievement-item {
+            background: #e8f5e8;
+            padding: 10px;
+            border-radius: 5px;
+            border-left: 3px solid #27ae60;
+            font-size: 10px;
+        }
+
+        .achievement-item strong {
+            color: #27ae60;
+            display: block;
+            margin-bottom: 3px;
+        }
+
+        /* Education */
+        .education-item {
+            background: #fff5f5;
+            padding: 12px;
+            border-radius: 5px;
+            border-left: 3px solid #e74c3c;
+            margin-bottom: 10px;
+        }
+
+        .degree {
+            font-size: 12px;
+            font-weight: 600;
+            color: #2c3e50;
+        }
+
+        .institution {
+            font-size: 10px;
+            color: #e74c3c;
+            margin-bottom: 5px;
+        }
+
+        .coursework {
+            font-size: 9.5px;
+            line-height: 1.4;
+        }
+
+        /* Awards */
+        .awards-list {
+            background: #fff9e6;
+            padding: 12px;
+            border-radius: 5px;
+            border-left: 3px solid #f39c12;
+        }
+
+        .awards-list ul {
+            list-style: none;
+            font-size: 10px;
+        }
+
+        .awards-list li {
+            margin-bottom: 5px;
+            padding-left: 15px;
+            position: relative;
+        }
+
+        .awards-list li:before {
+            content: "🏆";
+            position: absolute;
+            left: 0;
+        }
+
+        /* Projects Portfolio */
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+            margin-top: 10px;
+        }
+
+        .portfolio-section {
+            background: #f0f8ff;
+            padding: 12px;
+            border-radius: 5px;
+            border-top: 3px solid #3498db;
+        }
+
+        .portfolio-section h4 {
+            font-size: 11px;
+            font-weight: 600;
+            color: #2c3e50;
+            margin-bottom: 8px;
+        }
+
+        .portfolio-section ul {
+            list-style: none;
+            font-size: 9.5px;
+        }
+
+        .portfolio-section li {
+            margin-bottom: 3px;
+            padding-left: 12px;
+            position: relative;
+        }
+
+        .portfolio-section li:before {
+            content: "🎮";
+            position: absolute;
+            left: 0;
+            font-size: 8px;
+        }
+
+        /* Print Styles */
+        @media print {
+            body {
+                -webkit-print-color-adjust: exact;
+                color-adjust: exact;
+            }
+
+            .container {
+                max-width: none;
+                margin: 0;
+                padding: 15mm;
+            }
+
+            .section {
+                break-inside: avoid;
+                page-break-inside: avoid;
+            }
+
+            .job {
+                break-inside: avoid;
+                page-break-inside: avoid;
+            }
+        }
+
+        .two-column {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        @media (max-width: 768px) {
+            .two-column {
+                grid-template-columns: 1fr;
+            }
+
+            .skills-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .achievements-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .portfolio-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <!-- Header -->
+        <div class="header">
+            <h1>LEVASHAN PILLAY</h1>
+            <div class="subtitle">Unity Developer | Game Programmer</div>
+            <div class="contact-info">
+                <div class="contact-item">
+                    <span class="contact-icon"></span>
+                    <span>Levashanpillay11@gmail.com</span>
+                </div>
+                <div class="contact-item">
+                    <span class="contact-icon"></span>
+                    <span>+27 71 330 6099</span>
+                </div>
+                <div class="contact-item">
+                    <span class="contact-icon"></span>
+                    <span>92 Alinta, Comaro Street, Glenvista, Johannesburg, South Africa</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Professional Summary -->
+        <div class="section">
+            <h2 class="section-title">Professional Summary</h2>
+            <div class="summary">
+                Passionate Unity developer with over 3 years of professional experience in game development and VR
+                applications. Proven track record of shipping successful titles across multiple platforms including
+                Netflix, PlayStation, Xbox, Nintendo Switch, and PC. Specialized in C# programming, cross-platform
+                development, and creating engaging gameplay mechanics. Strong problem-solving abilities with experience
+                in team leadership and project management.
+            </div>
+        </div>
+
+        <!-- Technical Skills -->
+        <div class="section">
+            <h2 class="section-title">Technical Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h4>Game Development</h4>
+                    <ul>
+                        <li>Unity Engine (3+ years)</li>
+                        <li>C# Programming & OOP</li>
+                        <li>Cross-Platform Development</li>
+                        <li>Game Mechanics Design</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h4>Development Tools</h4>
+                    <ul>
+                        <li>Git, Perforce</li>
+                        <li>Jira, YouTrack</li>
+                        <li>VR Development</li>
+                        <li>Platform SDKs</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h4>Additional Skills</h4>
+                    <ul>
+                        <li>Code Review & QA</li>
+                        <li>Team Leadership</li>
+                        <li>Client Communication</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Professional Experience -->
+        <div class="section">
+            <h2 class="section-title">Professional Experience</h2>
+
+            <div class="job">
+                <div class="job-header">
+                    <div>
+                        <div class="job-title">Junior Software Developer</div>
+                        <div class="company">24BitGames</div>
+                    </div>
+                    <div class="duration">January 2023 - Present</div>
+                </div>
+
+                <div class="project">
+                    <div class="project-name">Total Accurate Battle Simulator</div>
+                    <div class="project-description">Implemented platform-specific features including progress and
+                        multiplayer activities. Resolved critical networking bugs and platform permission issues,
+                        improving game stability on PS5.</div>
+                </div>
+
+                <div class="project">
+                    <div class="project-name">Terra Nil Netflix Port</div>
+                    <div class="project-description">UI optimization and bug fixing efforts for the Netflix Games
+                        platform, ensuring seamless user experience and platform compliance. Contributed to successful
+                        launch with positive user reviews.</div>
+                </div>
+
+                <div class="project">
+                    <div class="project-name">Open Roads Multi-Platform Development</div>
+                    <div class="achievements">
+                        <ul>
+                            <li>Developed new gameplay features across 6 platforms (Nintendo Switch, PS4, PS5, Xbox One,
+                                Xbox Series X/S, PC)</li>
+                            <li>Diagnosed and resolved complex bugs, improving game stability by 40%</li>
+                            <li>Provided technical insights on feature implementation and architecture</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="project">
+                    <div class="project-name">Wheel World PS5</div>
+                    <div class="achievements">
+                        <ul>
+                            <li>Designed and implemented core gameplay enhancement features</li>
+                            <li>Developed PlayStation 5 specific progress tracking and challenge activities</li>
+                            <li>Created custom development tools improving team productivity</li>
+                            <li>Proactivity fixed crashes and bugs</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="job">
+                <div class="job-header">
+                    <div>
+                        <div class="job-title">Unity Developer | Senior Team Lead</div>
+                        <div class="company">The Boiler Room Productions</div>
+                        <div class="project-description" style="margin-bottom: 10px;">
+                            Developing immersive VR training simulations for mining equipment operation, enhancing
+                            workplace safety and training effectiveness.
+                        </div>
+                    </div>
+                    <div class="duration">August 2021 - October 2022</div>
+                </div>
+                <div class="achievements">
+                    <ul>
+                        <li>Led a development team of 12+ members on multiple concurrent projects</li>
+                        <li>Managed project timelines, resource allocation, and deliverable milestones</li>
+                        <li>Coordinated with stakeholders to define project requirements and scope</li>
+                        <li>Architected realistic VR simulations using Unity and VR SDKs</li>
+                        <li>Maintained direct client relationships</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Education -->
+        <div class="section">
+            <h2 class="section-title">Education</h2>
+            <div class="education-item">
+                <div class="degree">AI Career Essentials Certificate</div>
+                <div class="institution">ALX | August 2024</div>
+                <div class="coursework">
+                    <strong>Program Focus:</strong> 8-week intensive program in AI Augmented Professional Development
+                    Skills in the Digital Age. Covered modern AI tools, professional development strategies, and digital
+                    transformation skills essential for contemporary workplace success.
+                </div>
+            </div>
+            <div class="education-item">
+                <div class="degree">Bachelor of Arts in Digital Arts</div>
+                <div class="institution">University of the Witwatersrand, Johannesburg | January 2017 - December 2020
+                </div>
+                <div class="coursework">
+                    <strong>Relevant Coursework:</strong> Interactive Media Development (HTML, CSS, JavaScript, Web
+                    UX/UI), Advanced Game Design (UX/UI, Control Schemes, Gameplay Mechanics), Programming Fundamentals
+                    in C# for Unity, Research Project: "Educational Games and Toys - Theory and Analysis"
+                </div>
+            </div>
+            <div class="education-item">
+                <div class="degree">High School Diploma</div>
+                <div class="institution">Glenvista High School | January 2012 - December 2017</div>
+                <div class="coursework">
+                    <strong>Subjects:</strong> Mathematics, Physics, Engineering Graphics & Design, Geography, English,
+                    Afrikaans
+                </div>
+            </div>
+        </div>
+
+        <!-- Awards -->
+        <div class="section">
+            <h2 class="section-title">Awards & Recognition</h2>
+            <div class="awards-list">
+                <ul>
+                    <li>Digital Arts Project IV - Certificate of First Class (December 2020)</li>
+                    <li>Digital Arts Research Project - Certificate of First Class (December 2020)</li>
+                    <li>Digital Art Design Project - Certificate of First Class (December 2018)</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Projects Portfolio -->
+        <div class="section">
+            <h2 class="section-title">Projects Portfolio</h2>
+            <div class="portfolio-grid">
+                <div class="portfolio-section">
+                    <h4>Professional Projects</h4>
+                    <ul>
+                        <li>Terra Nil Netflix Port</li>
+                        <li>Open Roads</li>
+                        <li>Total Accurate Battle Simulator</li>
+                        <li>Wheel World PS5</li>
+                        <li>VR Training Platform</li>
+                    </ul>
+                </div>
+                <div class="portfolio-section">
+                    <h4>Technical Specializations</h4>
+                    <ul>
+                        <li>Cross-platform game development</li>
+                        <li>VR application development</li>
+                        <li>Performance optimization</li>
+                        <li>Custom Unity editor tools</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
